@@ -5,7 +5,7 @@
 //  Copyright (c) 2015 Batoul Apps. All rights reserved.
 //
 
-#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface ARAnalyticsLogger : DDAbstractLogger
 
