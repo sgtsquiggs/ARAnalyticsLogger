@@ -6,6 +6,7 @@
 //
 
 #import "ARAnalyticsLogger.h"
+#import <ARAnalytics/ARAnalytics.h>
 
 OBJC_EXTERN void ARLog (NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 
@@ -34,6 +35,7 @@ OBJC_EXTERN void ARLog (NSString *format, ...) NS_FORMAT_FUNCTION(1,2);
 	
 	dispatch_once(&pred, ^{
 		_sharedInstance = [[self alloc] init];
+		[ARAnalytics logShouldPrintStdout:NO];
 	});
 	
 	return _sharedInstance;
